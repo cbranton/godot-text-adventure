@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="NPC" load_steps=3 format=3 uid="uid://bece4w5lghenm"]
+
+[ext_resource type="Script" path="res://npc/NPC.gd" id="1_d7151"]
+[ext_resource type="Resource" uid="uid://xwym6ko307eu" path="res://items/potion.tres" id="1_ulhuj"]
+
+[resource]
+script = ExtResource("1_d7151")
+npc_name = "monster"
+initial_dialog = "Hey there! I mean, like ROAWWR!"
+post_quest_dialog = "Bye!"
+quest_item = ExtResource("1_ulhuj")

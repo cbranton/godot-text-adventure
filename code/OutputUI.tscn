@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwt3m8uhloc4y"]
+
+[ext_resource type="Script" path="res://OutputUI.gd" id="1_eqsq3"]
+[ext_resource type="PackedScene" uid="uid://2q444q7bdpsj" path="res://input/InputResponse.tscn" id="2_4y7el"]
+[ext_resource type="StyleBox" uid="uid://dl17xbtlk33wa" path="res://default_panel_style.tres" id="2_pgxfe"]
+
+[node name="OutputUI" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+script = ExtResource("1_eqsq3")
+
+[node name="Rows" type="PanelContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("2_pgxfe")
+
+[node name="Scroll" type="ScrollContainer" parent="Rows"]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="HistoryRows" type="VBoxContainer" parent="Rows/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+
+[node name="InputResponse" parent="Rows/Scroll/HistoryRows" instance=ExtResource("2_4y7el")]
+layout_mode = 2

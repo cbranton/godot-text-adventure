@@ -1,0 +1,111 @@
+[gd_scene load_steps=4 format=3 uid="uid://oapchy25kr5j"]
+
+[ext_resource type="StyleBox" uid="uid://dl17xbtlk33wa" path="res://default_panel_style.tres" id="1_7uall"]
+[ext_resource type="Script" path="res://SidePanel.gd" id="2_fcgd4"]
+[ext_resource type="FontFile" uid="uid://wgide8wptse" path="res://fonts/IBMPlexMono-Regular.ttf" id="2_jfemf"]
+
+[node name="SidePanel" type="PanelContainer"]
+custom_minimum_size = Vector2(256, 0)
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("1_7uall")
+script = ExtResource("2_fcgd4")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="Rows" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="RoomArea" type="VBoxContainer" parent="MarginContainer/Rows"]
+layout_mode = 2
+
+[node name="InfoLabel" type="RichTextLabel" parent="MarginContainer/Rows/RoomArea"]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_jfemf")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "You are in ..."
+fit_content = true
+
+[node name="RoomNameLabel" type="RichTextLabel" parent="MarginContainer/Rows/RoomArea"]
+clip_contents = false
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_jfemf")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "name of the room"
+fit_content = true
+
+[node name="RoomDescriptionLabel" type="RichTextLabel" parent="MarginContainer/Rows/RoomArea"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_jfemf")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "This is the room description"
+fit_content = true
+
+[node name="ListArea" type="VBoxContainer" parent="MarginContainer/Rows"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ExitLabel" type="RichTextLabel" parent="MarginContainer/Rows/ListArea"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_jfemf")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "You see"
+fit_content = true
+
+[node name="ItemsText" type="RichTextLabel" parent="MarginContainer/Rows/ListArea"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_jfemf")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "things in the room."
+fit_content = true
+
+[node name="NPCLabel" type="RichTextLabel" parent="MarginContainer/Rows/ListArea"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_jfemf")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "There are "
+fit_content = true
+
+[node name="NPCText" type="RichTextLabel" parent="MarginContainer/Rows/ListArea"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_jfemf")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "characters here."
+fit_content = true
+
+[node name="InventoryLabel" type="RichTextLabel" parent="MarginContainer/Rows/ListArea"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_jfemf")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "You are carrying"
+fit_content = true
+
+[node name="InventoryText" type="RichTextLabel" parent="MarginContainer/Rows/ListArea"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_jfemf")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "things you carry."
+fit_content = true
+
+[node name="HelpLabel" type="RichTextLabel" parent="MarginContainer/Rows"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_jfemf")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "You can get a list of available commands by typing 'help'"
+fit_content = true

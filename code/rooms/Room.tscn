@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://onchyq3l7cgs"]
+
+[ext_resource type="FontFile" uid="uid://wgide8wptse" path="res://fonts/IBMPlexMono-Regular.ttf" id="1_deidg"]
+[ext_resource type="Script" path="res://rooms/Room.gd" id="1_s6u0b"]
+
+[node name="Room" type="PanelContainer"]
+custom_minimum_size = Vector2(384, 256)
+offset_right = 384.0
+offset_bottom = 292.0
+script = ExtResource("1_s6u0b")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="Rows" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="RoomName" type="Label" parent="MarginContainer/Rows"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_deidg")
+theme_override_font_sizes/font_size = 24
+text = "RoomDescription"
+horizontal_alignment = 1
+
+[node name="RoomDescription" type="Label" parent="MarginContainer/Rows"]
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_deidg")
+theme_override_font_sizes/font_size = 16
+text = "a dilapidated garden shed"
+autowrap_mode = 2

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://2q444q7bdpsj"]
+
+[ext_resource type="Script" path="res://input/InputResponse.gd" id="1_2m4ha"]
+[ext_resource type="FontFile" uid="uid://wgide8wptse" path="res://fonts/IBMPlexMono-Regular.ttf" id="1_hwujj"]
+[ext_resource type="PackedScene" uid="uid://cfps05wfonu1j" path="res://input/Response.tscn" id="3_si61p"]
+
+[node name="InputResponse" type="VBoxContainer"]
+size_flags_horizontal = 3
+script = ExtResource("1_2m4ha")
+
+[node name="Rows" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InputHistory" type="Label" parent="Rows"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0.713518, 0.713518, 0.713518, 1)
+theme_override_fonts/font = ExtResource("1_hwujj")
+theme_override_font_sizes/font_size = 24
+text = "  > You said:"
+
+[node name="Response" parent="Rows" instance=ExtResource("3_si61p")]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2
